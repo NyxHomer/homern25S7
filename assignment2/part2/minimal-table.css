@@ -33,3 +33,18 @@ tr:nth-child(odd) td {
 caption {
   padding: 10px;
 }
+
+.name-top {
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+  }
+.name {
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+  }
+.name-bottom {
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+  }
