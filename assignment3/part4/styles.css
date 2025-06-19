@@ -21,31 +21,52 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
+    display:flex;
   }
   
   nav {
     background-color: #000;
+    position: sticky;
+    top: 0;
     padding: .5em;
   }
   
   nav ul {
+    display: flex;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
     list-style: none;
   }
   
   nav a {
+    display:block;
     color: #fff;
     text-decoration: none;
     padding: .5em 1em;
   }
   
+  article{
+    flex:2;
+    min-width: 250px;
+  }
+
+  aside{
+    flex:1;
+    min-width: 200px;
+  }
+
   .photos {
     list-style: none;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    gap: 30px
   }
 
   .feature {
       width: 200px;
+      float:left;
+      margin: 0 25px 15px 0;
+      height: auto;
   }
