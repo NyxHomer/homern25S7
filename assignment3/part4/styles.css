@@ -56,13 +56,15 @@ body {
     min-width: 200px;
   }
 
-  .photos {
-    list-style: none;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-    gap: 30px
-  }
+.photos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+  max-width: 320px;
+}
 
   .feature {
       width: 200px;
