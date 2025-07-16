@@ -6,8 +6,9 @@ html {
 div{
     border-left: 2px solid black;
     border-right: 2px solid black;
+    /* Because I used 5 divs, to bottom right looked weird, so I used to right instead*/
     background-image: linear-gradient(to right, 
-    rgb(0, 0, 0, 0) 0%, 
+    rgba(0, 0, 0, 0) 0%, 
     rgba(0, 0, 0, 0.2) 30%,
     rgba(0, 0, 0, 0.2) 100%);
 }
@@ -23,7 +24,7 @@ div{
     border-top-right-radius: 20px;
     
     box-shadow: 5px 5px 10px black;
-    box-shadow: inset 1px 1px 1px white;
+    box-shadow: inset 1px 1px 5px white;
 }
 
 .div-2{
@@ -49,7 +50,7 @@ div{
     line-height: 40px;
     font-size: 1.125rem; /*18px / 16 (1 rem) = 1.125rem*/
     color:pink;
-    text-shadow: 2px 2px 2px cyan;
+    text-shadow: 2px 2px 2px pink;
 
     box-shadow: 5px 5px 10px black;
     box-shadow: inset 1px 0px 1px white;
