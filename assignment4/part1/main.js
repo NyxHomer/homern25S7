@@ -34,24 +34,27 @@ function result() {
     var yItem = randomValueFromArray(insertY);
     var zItem = randomValueFromArray(insertZ);
 
-    newStory = newStory.replace(":insertx:", xItem);
-    newStory = newStory.replace(":inserty:", yItem);
-    newStory = newStory.replace(":insertz:", zItem);
+    newStory = newStory.replaceAll(":insertx:", xItem);
+    newStory = newStory.replaceAll(":inserty:", yItem);
+    newStory = newStory.replaceAll(":insertz:", zItem);
 
 
 
     if(customName.value !== '') {
-    const name = customName.value;
-
-     }
-
-    if(document.getElementById("uk").checked) {
-       // 1 stone = 14 pounds
-      const weight = Math.round(300 / 14) + ' stones';
-       // Fahrenheit to Celsius
-        const temperature = Math.round((94 - 32) * 5 / 9) + ' centigrade';
+        const name = customName.value;
+        newStory = newStory.replace("Bob", name)
     }
 
-    story.textContent = ;
+    if(document.getElementById("uk").checked) {
+        // 1 stone = 14 pounds
+        const weight = Math.round(300 / 14) + ' stones';
+        newStory = newStory.replaceAll("300 pounds", weight);
+        // Fahrenheit to Celsius
+        const temperature = Math.round((94 - 32) * 5 / 9) + ' centigrade';
+        newStory = newStory.replaceAll("94 fahrenheit", temperature);
+        
+    }
+
+    story.textContent = newStory;
     story.style.visibility = 'visible';
 }
