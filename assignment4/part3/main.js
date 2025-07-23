@@ -107,6 +107,7 @@ function loop() {
   ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
 
+  // For all balls, draw, update, check for collissions
   for (const ball of balls) {
     ball.draw();
     ball.update();
