@@ -28,15 +28,33 @@ const imageAlts = [
     "A butterfly"];
 
 /* Looping through images */
-
-const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
-thumbBar.appendChild(newImage);
-
 /* For loop  */
 for(let i = 0; i < images.length; i++){
-
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', images[i]);
+    newImage.setAttribute('alt', imageAlts[i]);
+    thumbBar.appendChild(newImage);
+    
+    newImage.addEventListener("click", e => {
+    displayedImage.src = e.target.src;
+    displayedImage.alt = e.target.alt;
+    });
 }
 
+
 /* Wiring up the Darken/Lighten button */
+btn.addEventListener('click', () => {
+    const btnClass = btn.getAttribute('class');
+
+    if(btnClass == 'dark'){
+        btn.setAttribute('class', 'light');
+        btn.textContent = "Lighten";
+        overlay.style.backgroundColor = "rgb(0, 0, 0, 0.5)";
+    }
+    else{
+        btn.setAttribute('class', 'dark');
+        btn.textContent = "Darken";
+        overlay.style.backgroundColor = "rgb(0, 0, 0, 0)";
+    }
+
+});
