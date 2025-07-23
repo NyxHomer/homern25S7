@@ -28,6 +28,7 @@ function randomRGB() {
 // Create ball class
 class Ball {
   constructor(x, y, velX, velY, color, size) {
+    // Set objects values to the ones passed through the constructor
     this.x = x;
     this.y = y;
     this.velX = velX;
@@ -46,22 +47,27 @@ class Ball {
 
   // Update method
   update() {
+    // If the ball is at the far right of the screen, reverse
     if (this.x + this.size >= width) {
       this.velX = -this.velX;
     }
 
+    // If the ball is at the far left of the screen, reverse
     if (this.x - this.size <= 0) {
       this.velX = -this.velX;
     }
 
+    // If the ball is at the top of the screen, reverse
     if (this.y + this.size >= height) {
       this.velY = -this.velY;
     }
 
+    // If the ball is at the bottom of the screen, reverse
     if (this.y - this.size <= 0) {
       this.velY = -this.velY;
     }
 
+    // Move ball
     this.x += this.velX;
     this.y += this.velY;
   }
