@@ -1,3 +1,10 @@
+/*
+    Name: Nyx Homer
+	File: main.js
+	Date: 16/07/2025
+	Assignment 4 - Part 2
+*/
+
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
