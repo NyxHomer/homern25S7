@@ -1,3 +1,10 @@
+/*
+  Name: Nyx Homer
+	File: main-finished.js
+	Date: 27/07/2025
+	Assignment 4 - Part #
+*/
+
 // set up canvas
 
 const canvas = document.querySelector("canvas");
