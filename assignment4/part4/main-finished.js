@@ -113,9 +113,28 @@ class EvilCircle extends Shape{
   // Draw method
   draw() {
     ctx.beginPath();
-    ctx.fillStyle = this.color;
+    ctx.strokeStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-    ctx.fill();
+    ctx.stroke();
+  }
+
+  // Check bounds method
+  checkBounds() {
+    if (this.x + this.size >= width) {
+      this.x -= this.size;
+    }
+
+    if (this.x - this.size <= 0) {
+      this.x += this.size;
+    }
+
+    if (this.y + this.size >= height) {
+      this.y -= this.size;
+    }
+
+    if (this.y - this.size <= 0) {
+      this.y += this.size;
+    }
   }
 }
 
